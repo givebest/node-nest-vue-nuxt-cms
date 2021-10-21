@@ -1,0 +1,139 @@
+@primary: #17a2b8;
+
+html,
+body {
+  font-size: 14px;
+  color: #42494f;
+  background-color: #f4f7fa;
+}
+
+// reset bootstrap
+a,
+.page-link {
+  color: @primary;
+}
+
+.list-group-item.active,
+.btn-primary,
+.page-item.active .page-link {
+  background-color: @primary;
+  border-color: @primary;
+}
+.card-text {
+  line-height: 1.8;
+}
+
+.header-- {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  .navbar-brand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nav-item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.main-- {
+  padding-top: 80px;
+  margin-bottom: 20px;
+}
+.main--banner {
+  margin-bottom: 20px;
+  .card-img,
+  .card {
+    border-radius: 10px;
+  }
+  .card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 2px #333;
+    .card-title {
+      font-size: 2rem;
+    }
+    .card-text {
+      font-size: 1.2rem;
+    }
+    .card-title,
+    .card-text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+.main--rich__text {
+  font-size: 16px;
+  h1 {
+    margin: 20px 0 30px;
+    text-align: center;
+  }
+  .detail--pic {
+    margin: 20px 0;
+  }
+  img {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 40%;
+  }
+  .rich--img__wide {
+    float: none;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.product--list {
+  padding: 10px 0;
+  .card {
+    margin-bottom: 30px;
+    border: none;
+  }
+}
+
+.home--banner {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.home--feature {
+  border-radius: 10px;
+  overflow: hidden;
+  .card {
+    padding: 20px 40px;
+    border: none;
+    // margin-bottom: 20px;
+    h4 {
+      margin-bottom: 30px;
+    }
+  }
+  .card-body {
+    display: flex;
+    // padding: 0 80px;
+    justify-content: center;
+    align-items: center;
+    .col-md-6 {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .card img {
+    margin-bottom: 20px;
+    max-width: 90%;
+  }
+}
+
+.home--product {
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+}

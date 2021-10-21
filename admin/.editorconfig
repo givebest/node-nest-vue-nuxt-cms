@@ -1,0 +1,15 @@
+# http://editorconfig.org
+# top-most EditorConfig file 表示是最顶层的配置文件，发现设为true时，才会停止查找.editorconfig文件
+root = true
+
+[*]
+charset = utf-8 # 设置文件字符集为 utf-8
+indent_style = space # 使用空格键缩进(tab、space)
+indent_size = 2 # 缩进 2 个字符
+end_of_line = lf # 换行符(lf、cr、crlf)
+insert_final_newline = true # 设为 true 表示使文件在保存时以换行符结尾
+trim_trailing_whitespace = true # 设置为 true 会删除文件中换行符之前的所有空白字符
+
+[*.md] # 针对 markdown 文件设置风格
+insert_final_newline = false
+trim_trailing_whitespace = false
