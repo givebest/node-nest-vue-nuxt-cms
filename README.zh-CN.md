@@ -1,11 +1,17 @@
 # GiiBee CMS
 
-> 使用 nest.js 基于 node.js 和 nuxt.js 基于 vue.js 开发的 CMS 系统，实现 SSR 服务端渲染，且可生成静态HTML，有利于SEO。
+> 使用 nest.js 基于 node.js 和 nuxt.js 基于 vue.js 开发的 CMS 系统，实现 SSR 服务端渲染，且可生成静态HTML，有利于SEO。适合企业搭建SEO型网站。
 
 [English](./README.md) | 简体中文]
 
 
 ## 开始使用
+
+### MySql
+
+1. 创建 `nest_cms_api` 表；
+
+2. 使用 MySql 命令或者管理软件导入 `DB` 目录下的 `.sql` 文件。
 
 ### CMS API
 
