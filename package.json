@@ -1,0 +1,26 @@
+{
+  "name": "node-nest-vue-nuxt-cms",
+  "version": "1.0.0",
+  "description": "The CMS system developed by nest.js based on node.js and nuxt.js based on vue.js is used to implement SSR server-side rendering and generate static HTML, which is conducive to SEO.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/givebest/node-nest-vue-nuxt-cms.git"
+  },
+  "keywords": [
+    "node-cms",
+    "nest-cms",
+    "nuxt",
+    "vue",
+    "admin-template",
+    "management-system"
+  ],
+  "author": "Givebest <givenlovs@msn.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/givebest/node-nest-vue-nuxt-cms/issues"
+  },
+  "homepage": "https://github.com/givebest/node-nest-vue-nuxt-cms#readme"
+}
