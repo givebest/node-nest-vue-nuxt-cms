@@ -1,6 +1,9 @@
 # GiiBee CMS
 
-> A CMS system developed using nest.js based on node.js and nuxt.js based on vue.js, which can generate static HTML and is beneficial to SEO.
+> The CMS system developed by nest.js based on node.js and nuxt.js based on vue.js is used to implement SSR server-side rendering and generate static HTML, which is conducive to SEO.
+
+
+English | [简体中文](./README.zh-CN.md)
 
 
 ## Getting started
@@ -52,7 +55,7 @@ cd web
 
 npm install 
 
-# serve with hot reload at localhost:3001
+# development
 $ npm run dev
 
 # build for production and launch server
@@ -69,9 +72,11 @@ $ npm run generate
 ## Features
 
 * NestJS + MySql output API.
-* NuxtJS + Vue + Bootstrap-vue can generate static HTML for the whole site.
+* NuxtJS + Vue + Bootstrap-vue can generate static HTML for the whole site (SEO).
+* Nuxtjs vue implements SSR server-side rendering (SEO).
 * Element UI + Vue realizes CMS management.
 * Front-end and back-end separation.
+* JWT authentication.
 * Commodity classification supports custom routing and web page description (SEO).
 * Product name supports custom routing and web page description (SEO).
 * Responsive web pages, adapted to PC and mobile terminals.
