@@ -1,7 +1,7 @@
 {
   "name": "node-nest-vue-nuxt-cms",
   "version": "1.0.0",
-  "description": "The CMS system developed by nest.js based on node.js and nuxt.js based on vue.js is used to implement SSR server-side rendering and generate static HTML, which is conducive to SEO.",
+  "description": "The CMS system developed by nest.js based on node.js and nuxt.js based on vue.js is used to implement SSR server-side rendering and generate static HTML, which is conducive to SEO.Suitable for enterprises to build SEO-type websites.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
