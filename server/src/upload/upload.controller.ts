@@ -22,7 +22,7 @@ const baseHost = baseHosts[NODE_ENV] || {
   domain: 'www.giibee.com',
 };
 
-// @UseGuards(JwtAuthGuardUser)
+@UseGuards(JwtAuthGuardUser)
 @Controller('api/upload')
 export class UploadController {
   @Post()
