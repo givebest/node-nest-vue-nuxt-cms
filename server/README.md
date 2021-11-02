@@ -19,6 +19,17 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+# pm2
+
+npm install -g pm2
+
+pm2 start npm --name server -- run start:pm2
+
+pm2 restart server # restart
+pm2 ls # list
+pm2 monit # monit
+
 ```
 
 ## Test
