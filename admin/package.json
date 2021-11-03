@@ -19,7 +19,7 @@
     "axios": "0.18.1",
     "ckeditor5": "^28.0.0",
     "clipboard": "2.0.4",
-    "core-js": "3.6.5",
+    "core-js": "3.19.0",
     "dayjs": "^1.8.30",
     "element-ui": "2.13.2",
     "fuse.js": "3.4.4",
