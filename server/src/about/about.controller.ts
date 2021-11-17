@@ -19,7 +19,7 @@ import { RetrieveAboutDto } from './dto/retrieve-about.dto';
 import { UpdateAboutDto } from './dto/update-about.dto';
 import { FindAboutDto } from './dto/find-about.dto';
 import { JwtAuthGuardUser } from 'src/auth/guards/jwt-auth.guard';
-
+import { Log } from 'src/libs/utils';
 @ApiTags('关于我们')
 @Controller('api/about')
 export class AboutController {
@@ -37,7 +37,11 @@ export class AboutController {
   @UseGuards(JwtAuthGuardUser)
   @Delete()
   @ApiOperation({ summary: '删除' })
-  async remove(@Body() removeAboutDto: RemoveAboutDto): Promise<any> {
+  async remove(
+    @Body() removeAboutDto: RemoveAboutDto,
+    @Request() req,
+  ): Promise<any> {
+    Log({ req });
     return await this.aboutsService.delete(removeAboutDto);
   }
 

@@ -20,6 +20,7 @@ import { UpdateHomeDto } from './dto/update-home.dto';
 import { FindHomeDto } from './dto/find-home.dto';
 import { JwtAuthGuardUser } from 'src/auth/guards/jwt-auth.guard';
 
+import { Log } from 'src/libs/utils';
 @ApiTags('首页')
 @Controller('api/home')
 export class HomeController {
@@ -37,7 +38,11 @@ export class HomeController {
   @UseGuards(JwtAuthGuardUser)
   @Delete()
   @ApiOperation({ summary: '删除' })
-  async remove(@Body() removeHomeDto: RemoveHomeDto): Promise<any> {
+  async remove(
+    @Body() removeHomeDto: RemoveHomeDto,
+    @Request() req,
+  ): Promise<any> {
+    Log({ req });
     return await this.homesService.delete(removeHomeDto);
   }
 

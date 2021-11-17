@@ -4,6 +4,7 @@ import {
   UseInterceptors,
   UploadedFile,
   UseGuards,
+  Request,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
@@ -14,6 +15,7 @@ import { ApiConsumes, ApiBody } from '@nestjs/swagger';
 import { JwtAuthGuardUser } from 'src/auth/guards/jwt-auth.guard';
 import Jimp from 'jimp';
 const jimp = require('jimp');
+import { Log } from 'src/libs/utils';
 
 const { NODE_ENV } = process.env;
 const baseHost = baseHosts[NODE_ENV] || {
@@ -56,7 +58,8 @@ export class UploadController {
       },
     },
   })
-  async uploadFile(@UploadedFile() upload) {
+  async uploadFile(@UploadedFile() upload, @Request() req) {
+    Log({ req });
     console.log('baseHost', baseHost);
     console.log('file-upload', upload);
     const { filename, path, mimetype } = upload;

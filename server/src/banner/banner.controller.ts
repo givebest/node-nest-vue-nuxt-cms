@@ -9,6 +9,7 @@ import {
   Put,
   Param,
   Query,
+  Logger,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
 import { CreateBannerDto } from './dto/create-banner.dto';
@@ -19,6 +20,8 @@ import { RetrieveBannerDto } from './dto/retrieve-banner.dto';
 import { UpdateBannerDto } from './dto/update-banner.dto';
 import { FindBannerDto } from './dto/find-banner.dto';
 import { JwtAuthGuardUser } from 'src/auth/guards/jwt-auth.guard';
+
+import { Log } from 'src/libs/utils';
 
 @ApiTags('Banner')
 @Controller('api/banner')
@@ -37,7 +40,11 @@ export class BannerController {
   @UseGuards(JwtAuthGuardUser)
   @Delete()
   @ApiOperation({ summary: '删除' })
-  async remove(@Body() removeBannerDto: RemoveBannerDto): Promise<any> {
+  async remove(
+    @Body() removeBannerDto: RemoveBannerDto,
+    @Request() req,
+  ): Promise<any> {
+    Log({ req });
     return await this.bannersService.delete(removeBannerDto);
   }
 
