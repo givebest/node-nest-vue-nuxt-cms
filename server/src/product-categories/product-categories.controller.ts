@@ -20,6 +20,7 @@ import { UpdateProductCategoriesDto } from './dto/update-product-categories.dto'
 import { FindProductCategoriesDto } from './dto/find-product-categories.dto';
 import { JwtAuthGuardUser } from 'src/auth/guards/jwt-auth.guard';
 
+import { Log } from 'src/libs/utils';
 @ApiTags('产品分类')
 @Controller('api/product-categories')
 export class ProductCategoriesController {
@@ -45,7 +46,9 @@ export class ProductCategoriesController {
   @ApiOperation({ summary: '删除' })
   async remove(
     @Body() removeProductCategoriesDto: RemoveProductCategoriesDto,
+    @Request() req,
   ): Promise<any> {
+    Log({ req });
     return await this.productCategoriesService.delete(
       removeProductCategoriesDto,
     );

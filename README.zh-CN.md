@@ -77,6 +77,7 @@ $ npm run generate
 ## 特色
 
 * NestJS + MySql 输出 API。
+* API 调用敏感操作记录 IP、管理员及客户端信息。
 * Nuxtjs 实现 Vue  SSR 服务端渲染 (SEO)。
 * NuxtJS + Vue + Bootstrap-vue 实现整站生成 HTML 静态网站 (SEO)。
 * Element UI + Vue 实现 CMS 系统管理。

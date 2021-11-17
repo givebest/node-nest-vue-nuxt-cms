@@ -21,7 +21,7 @@ import { FindUserDto } from './dto/find-user.dto';
 import { UpdataUserPasswordDto } from './dto/update-user-password.dto';
 import { UpdataUserAvatarDto } from './dto/update-user-avatar.dto';
 import { JwtAuthGuardUser } from 'src/auth/guards/jwt-auth.guard';
-
+import { Log } from 'src/libs/utils';
 @ApiTags('用户')
 @Controller('api/users')
 export class UsersController {
@@ -47,7 +47,11 @@ export class UsersController {
   @UseGuards(JwtAuthGuardUser)
   @Delete()
   @ApiOperation({ summary: '删除' })
-  async remove(@Body() removeUserDto: RemoveUserDto): Promise<any> {
+  async remove(
+    @Body() removeUserDto: RemoveUserDto,
+    @Request() req,
+  ): Promise<any> {
+    Log({ req });
     return await this.usersService.delete(removeUserDto);
   }
 

@@ -12,6 +12,7 @@ import { UploadModule } from './upload/upload.module';
 import { AuthModule } from './auth/auth.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { Log4jsModule } from './libs/log4js/';
 
 const ENV = process.env.NODE_ENV;
 const dbInfo = {
@@ -52,6 +53,7 @@ const { host, port, username, password } = dbInfo;
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
+    Log4jsModule.forRoot(),
   ],
   controllers: [AppController],
   providers: [AppService],

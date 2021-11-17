@@ -19,7 +19,7 @@ import { RetrieveProductDto } from './dto/retrieve-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { FindProductDto } from './dto/find-product.dto';
 import { JwtAuthGuardUser } from 'src/auth/guards/jwt-auth.guard';
-
+import { Log } from 'src/libs/utils';
 @ApiTags('产品')
 @Controller('api/products')
 export class ProductsController {
@@ -37,7 +37,11 @@ export class ProductsController {
   @UseGuards(JwtAuthGuardUser)
   @Delete()
   @ApiOperation({ summary: '删除' })
-  async remove(@Body() removeProductDto: RemoveProductDto): Promise<any> {
+  async remove(
+    @Body() removeProductDto: RemoveProductDto,
+    @Request() req,
+  ): Promise<any> {
+    Log({ req });
     return await this.productsService.delete(removeProductDto);
   }
 
