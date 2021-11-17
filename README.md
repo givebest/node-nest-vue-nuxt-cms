@@ -78,6 +78,7 @@ $ npm run generate
 ## Features
 
 * NestJS + MySql output API.
+* API calls sensitive operation records IP, administrator and client information.
 * NuxtJS + Vue + Bootstrap-vue can generate static HTML for the whole site (SEO).
 * Nuxtjs vue implements SSR server-side rendering (SEO).
 * Element UI + Vue realizes CMS management.

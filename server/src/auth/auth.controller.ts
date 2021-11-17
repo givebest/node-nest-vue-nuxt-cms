@@ -1,9 +1,8 @@
-import { Controller, Post, Request, Body, UseGuards } from '@nestjs/common';
+import { Controller, Post, Request, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LocalAuthGuardUser } from './guards/local-auth.guard';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
-import { LoginUserDto } from './dto/login-user.dto';
-import { WxLoginUserDto } from './dto/wxlogin-user.dto';
+import { Log } from 'src/libs/utils';
 
 @ApiTags('user auth')
 @Controller('api/auth')
@@ -15,6 +14,7 @@ export class AuthController {
   @ApiOperation({ summary: '用户登录' })
   async login(@Request() req) {
     console.log('user auth ctrl', req.user);
+    Log({ req, user: req.user });
     return this.authService.login(req.user);
   }
   // async login(@Body() loginUserDto: LoginUserDto) {
