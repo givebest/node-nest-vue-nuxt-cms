@@ -40,7 +40,7 @@ const { host, port, username, password } = dbInfo;
       database: 'nest_cms_api',
       entities: [],
       autoLoadEntities: true,
-      synchronize: true,
+      synchronize: false,
     }),
     UsersModule,
     ProductsModule,
