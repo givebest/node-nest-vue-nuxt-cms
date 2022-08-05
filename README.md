@@ -33,6 +33,7 @@ $ npm run start:prod
 
 * Serve: [http://localhost:3000/](http://localhost:3000/)
 * API documentation: [http://localhost:3000/api/](http://localhost:3000/api/)
+* Configuration: [config.default.ts](server/config/config.default.ts)
 
 ### CMS management
 

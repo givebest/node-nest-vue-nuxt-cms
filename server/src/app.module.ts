@@ -13,35 +13,38 @@ import { AuthModule } from './auth/auth.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { Log4jsModule } from './libs/log4js/';
-
-const ENV = process.env.NODE_ENV;
-const dbInfo = {
-  host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: '123456789',
-};
-if (ENV === 'prod') {
-  dbInfo.host = '10.0.224.4';
-  dbInfo.port = 25532 || 3306;
-  dbInfo.username = 'root';
-  dbInfo.password = '';
-}
-const { host, port, username, password } = dbInfo;
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import configDefault from '../config/config.default';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host,
-      port,
-      username,
-      password,
-      database: 'nest_cms_api',
-      entities: [],
-      autoLoadEntities: true,
-      synchronize: false,
+    // 配置模块
+    ConfigModule.forRoot({
+      load: [configDefault],
     }),
+    // TypeOrm模块
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        type: 'mysql',
+        host: configService.get('mysql.host'),
+        port: +configService.get('mysql.pord'),
+        username: configService.get('mysql.username'),
+        password: configService.get('mysql.password'),
+        database: configService.get('mysql.database'),
+        synchronize: configService.get('mysql.synchronize'),
+        autoLoadEntities: true,
+        keepConnectionAlive: true,
+      }),
+    }),
+    // 静态资源模块
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    }),
+    // 日志模块
+    Log4jsModule.forRoot(),
+    // 业务模块...
     UsersModule,
     ProductsModule,
     ProductCategoriesModule,
@@ -50,10 +53,6 @@ const { host, port, username, password } = dbInfo;
     BannerModule,
     UploadModule,
     AuthModule,
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-    }),
-    Log4jsModule.forRoot(),
   ],
   controllers: [AppController],
   providers: [AppService],
