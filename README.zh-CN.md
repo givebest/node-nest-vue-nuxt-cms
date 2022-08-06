@@ -32,6 +32,7 @@ $ npm run start:prod
 
 * 查看: [http://localhost:3000/](http://localhost:3000/)
 * API 文档: [http://localhost:3000/api/](http://localhost:3000/api/)
+* 项目配置: [config.default.ts](server/config/config.default.ts)
 
 ### CMS 管理系统
 

@@ -1,0 +1,18 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript"
+  ],
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    // "source.organizeImports": true
+  },
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": true,
+    "strings": true
+  },
+}
