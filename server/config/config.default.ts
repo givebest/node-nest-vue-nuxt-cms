@@ -16,7 +16,7 @@ export default () =>
         username: 'username',
         password: 'password',
         database: 'database',
-        synchronize: true,
+        synchronize: false,
       },
     },
     {
