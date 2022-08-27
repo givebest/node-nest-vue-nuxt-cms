@@ -90,7 +90,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: function() {
+      default: function () {
         return 'create'
       },
     },
@@ -201,7 +201,7 @@ export default {
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate(valid => {
+      this.$refs[formName].validate((valid) => {
         /* if (true) {
           console.log('formData', this.formData)
           return
@@ -302,13 +302,13 @@ export default {
     getDetail() {
       this.loading = true
 
-      getDetail(this.querys.id).then(res => {
+      getDetail(this.querys.id).then((res) => {
         this.loading = false
 
         const { banner } = res
         this.uploadFile.list.push({
           name: banner,
-          url: baseHost + banner.replace('public/', '/'),
+          url: baseHost + banner.replace('public/', ''),
         })
 
         this.formData = res

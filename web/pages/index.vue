@@ -121,7 +121,7 @@ export default {
       const pic = v.pic;
 
       if (pic) {
-        v.pic = pic.replace("public/", "/");
+        v.pic = pic.replace("public/", "");
       }
       return v;
     });

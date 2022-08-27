@@ -21,7 +21,7 @@
       <div class="filter-container__ctrl">
         <el-button
           class="filter-item"
-          style="margin-left: 10px;"
+          style="margin-left: 10px"
           type="primary"
           plain
           icon="el-icon-edit"
@@ -51,8 +51,8 @@
       <el-table-column label="图片" align="center">
         <template slot-scope="{ row }">
           <el-popover placement="right" width="230" trigger="hover">
-            <img :src="row.pic" style="width: 200px;" />
-            <img :src="row.pic" slot="reference" style="width: 40px;" />
+            <img :src="row.pic" style="width: 200px" />
+            <img :src="row.pic" slot="reference" style="width: 40px" />
           </el-popover>
         </template>
       </el-table-column>
@@ -176,15 +176,15 @@ export default {
     // 列表
     getList() {
       this.listLoading = true
-      fetchList(this.listQuery).then(res => {
+      fetchList(this.listQuery).then((res) => {
         const { data = [], total = 0 } = res
 
         this.total = total
 
-        this.list = data.map(v => {
+        this.list = data.map((v) => {
           let pic = v.pic
           if (pic) {
-            v.pic = baseHost + pic.replace('public/', '/')
+            v.pic = baseHost + pic.replace('public/', '')
           }
           return v
         })
@@ -210,7 +210,7 @@ export default {
     handleDelete(row) {
       let ids = []
       if (Array.isArray(row)) {
-        ids = row.map(v => v.id)
+        ids = row.map((v) => v.id)
       } else {
         ids.push(row.id)
       }

@@ -69,7 +69,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: function() {
+      default: function () {
         return 'create'
       },
     },
@@ -129,7 +129,7 @@ export default {
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate(valid => {
+      this.$refs[formName].validate((valid) => {
         if (!valid) {
           return false
         }
@@ -213,13 +213,13 @@ export default {
     getDetail() {
       this.loading = true
 
-      getDetail(this.querys.id).then(res => {
+      getDetail(this.querys.id).then((res) => {
         this.loading = false
 
         const { pic } = res
         this.uploadFile.list.push({
           name: pic,
-          url: baseHost + pic.replace('public/', '/'),
+          url: baseHost + pic.replace('public/', ''),
         })
 
         this.formData = res
