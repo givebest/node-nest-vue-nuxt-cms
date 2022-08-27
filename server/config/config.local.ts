@@ -6,6 +6,6 @@ export default () => ({
     username: 'nest_cms_api',
     password: 'nest_cms_api',
     database: 'nest_cms_api',
-    synchronize: true,
+    synchronize: false,
   },
 });
