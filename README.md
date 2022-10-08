@@ -2,9 +2,7 @@
 
 > The CMS system developed by nest.js based on node.js and nuxt.js based on vue.js is used to implement SSR server-side rendering and generate static HTML, which is conducive to SEO.Suitable for enterprises to build SEO-type websites.
 
-
 English | [简体中文](./README.zh-CN.md)
-
 
 ## Getting started
 
@@ -19,7 +17,7 @@ English | [简体中文](./README.zh-CN.md)
 ```bash
 cd server
 
-npm install 
+npm install
 
 # development
 $ npm run start
@@ -31,16 +29,16 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-* Serve: [http://localhost:3000/](http://localhost:3000/)
-* API documentation: [http://localhost:3000/api/](http://localhost:3000/api/)
-* Configuration: [config.default.ts](server/config/config.default.ts)
+- Serve: [http://localhost:3000/](http://localhost:3000/)
+- API documentation: [http://localhost:3000/api/](http://localhost:3000/api/)
+- Configuration: [config.default.ts](server/config/config.default.ts)
 
 ### CMS management
 
 ```bash
 cd admin
 
-npm install 
+npm install --legacy-peer-deps
 
 # serve with hot reload at localhost:3002
 npm run dev
@@ -52,15 +50,14 @@ npm run build:stage
 npm run build:prod
 ```
 
-* Serve: [http://localhost:3002/](http://localhost:3002/)
-
+- Serve: [http://localhost:3002/](http://localhost:3002/)
 
 ### CMS web
 
 ```bash
 cd web
 
-npm install 
+npm install
 
 # development
 $ npm run dev
@@ -73,47 +70,47 @@ $ npm run start
 $ npm run generate
 ```
 
-* Serve: [http://localhost:3001/](http://localhost:3001/)
-
+- Serve: [http://localhost:3001/](http://localhost:3001/)
 
 ## Features
 
-* NestJS + MySql output API.
-* API calls sensitive operation records IP, administrator and client information.
-* NuxtJS + Vue + Bootstrap-vue can generate static HTML for the whole site (SEO).
-* Nuxtjs vue implements SSR server-side rendering (SEO).
-* Element UI + Vue realizes CMS management.
-* Front-end and back-end separation.
-* JWT authentication.
-* Commodity classification supports custom routing and web page description (SEO).
-* Product name supports custom routing and web page description (SEO).
-* Responsive web pages, adapted to PC and mobile terminals.
+- NestJS + MySql output API.
+- API calls sensitive operation records IP, administrator and client information.
+- NuxtJS + Vue + Bootstrap-vue can generate static HTML for the whole site (SEO).
+- Nuxtjs vue implements SSR server-side rendering (SEO).
+- Element UI + Vue realizes CMS management.
+- Front-end and back-end separation.
+- JWT authentication.
+- Commodity classification supports custom routing and web page description (SEO).
+- Product name supports custom routing and web page description (SEO).
+- Responsive web pages, adapted to PC and mobile terminals.
 
 ## screenshot
 
 ### CMS web
-![home](screenshot/web/mobile-home.png)    
 
-![home](screenshot/web/home.jpg)    
+![home](screenshot/web/mobile-home.png)
 
-![product](screenshot/web/mobile-product.png)    
+![home](screenshot/web/home.jpg)
 
-![product](screenshot/web/product.jpg)    
+![product](screenshot/web/mobile-product.png)
 
-![about](screenshot/web/mobile-about.png)    
-![about](screenshot/web/about.jpg)    
+![product](screenshot/web/product.jpg)
+
+![about](screenshot/web/mobile-about.png)  
+![about](screenshot/web/about.jpg)
 
 ### CMS management
 
-![banner](screenshot/admin/banner.png)    
+![banner](screenshot/admin/banner.png)
 
-![product](screenshot/admin/product-create.png)    
+![product](screenshot/admin/product-create.png)
 
-![product](screenshot/admin/product.png)    
+![product](screenshot/admin/product.png)
 
-### CMS  API
+### CMS API
 
-![API](screenshot/server/api.jpg)    
+![API](screenshot/server/api.jpg)
 
 ## License
 

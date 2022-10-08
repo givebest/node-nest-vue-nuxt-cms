@@ -39,9 +39,16 @@ import configDefault from '../config/config.default';
       }),
     }),
     // 静态资源模块
-    ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-    }),
+    ServeStaticModule.forRoot(
+      {
+        rootPath: join(__dirname, '..', 'public'),
+        serveRoot: '/',
+      },
+      {
+        rootPath: join(__dirname, '..', 'uploads'),
+        serveRoot: '/uploads',
+      },
+    ),
     // 日志模块
     Log4jsModule.forRoot(),
     // 业务模块...
