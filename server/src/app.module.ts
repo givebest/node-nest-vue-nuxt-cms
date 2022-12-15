@@ -29,7 +29,7 @@ import configDefault from '../config/config.default';
       useFactory: (configService: ConfigService) => ({
         type: 'mysql',
         host: configService.get('mysql.host'),
-        port: +configService.get('mysql.pord'),
+        port: +configService.get('mysql.port'),
         username: configService.get('mysql.username'),
         password: configService.get('mysql.password'),
         database: configService.get('mysql.database'),
